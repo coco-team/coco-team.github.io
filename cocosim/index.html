@@ -118,10 +118,10 @@
                                                   </div>
 						</div>
 						<!-- header-right end -->
-                                                    <div class="github-fork-ribbon-wrapper right">
-                                                    <div class="github-fork-ribbon">
-                                                      <a href="https://github.com/coco-team/cocosim">Fork me on GitHub</a>
-                                                    </div>
+                            <div class="github-fork-ribbon-wrapper right">
+                             <div class="github-fork-ribbon">
+                                <a href="https://github.com/coco-team/cocosim">Fork me on GitHub</a>
+                                    </div>
 
 					</div>
 				</div>
@@ -138,7 +138,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center"><span>CoCoSim</span></h1>
-				<h2 class="text-center"><span>Automated analysis framework for Simulink/Stateflow</span></h2>
+				<h2 class="text-center"><span>Automated analysis and compilation framework for Simulink/Stateflow</span></h2>
 						</div>
 					</div>
 				</div>
@@ -202,20 +202,20 @@ src="https://www.youtube.com/embed/iqwVCiU46Y4?autoplay=1">
 										</div>
 										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 											<div class="panel-body">
-                                                    The compiler, translate modularly the pre-processed Simulink model and generates Lustre code.
+                                                    The compiler, translate modularly the pre-processed Simulink model and generates Lustre code. Moreover, it performs book-keeping of the different Simulink/Stateflow constructs (e.g. signal name, block type etc ..). This allows to trace Simulink/Stateflow constructs in the Lustre programs.
 											</div>
 										</div>
 									</div>
 									<div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingThree">
 											<h4 class="panel-title">
-											  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Interface to external solvers (e.g. Zustre, Kind2, JKind, etc ..) and compilers (e.g. LustreC).
+											  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Interface to external solvers 
 												</a>
 											</h4>
 										</div>
 										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 											<div class="panel-body">
-											Takes the Lustre code and ...
+											Takes the Lustre code and it performs either (i) compilation into imperative code (C or Rust) or (ii) it performs sfatey analysis of the provided property. For compilation it uses <a href="https://github.com/coco-team/lustrec">LustreC</a>, while for safety verification it uses one of: <a href="https://github.com/coco-team/zustre">Zustre</a>, <a href="http://kind2-mc.github.io/kind2/">Kind2</a> or <a href="https://github.com/agacek/jkind/">JKind</a>. The result of the safety analysis is reported back to the Matlab environment. In case the property supplied is falsified, CoCoSim provides means to simulate the counterexample trace in the Matlab environment.
 											</div>
 										</div>
 									</div>
